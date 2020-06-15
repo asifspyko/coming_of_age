@@ -1,0 +1,110 @@
+.site-footer {
+    background-color: $teal;
+    padding: 70px 0 75px;
+    color: $white;
+
+    form {
+        h2 {
+            color: $white;
+            margin-bottom: 21px;
+        }
+
+        input {
+            padding: 0 15px;
+            height: 50px;
+            border: 3px solid $white;
+            color: $blue;
+            outline: none !important;
+            box-shadow: none !important;
+
+            @include placeholder {
+                color: rgba($blue, 0.8);
+            }
+
+            &:focus {
+                border: 3px solid $blue;
+            }
+        }
+
+        .btn-wrap {
+            text-align: right;
+            margin-top: 16px;
+
+            button {
+                padding: 8px 10px;
+                background-color: $white;
+                color: $teal;
+                font-family: $circular_book;
+                cursor: pointer;
+                @extend %transition;
+
+                &:hover {
+                    color: $white;
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+
+    .pl-75 {
+        padding-left: 75px;
+    }
+
+    .footer-block-wrapper {
+        @include flex;
+    }
+
+    .footer-block {
+        min-width: 108px;
+
+        @include not-last {
+            margin-right: 60px;
+        }
+
+        .social-links {
+            @include flex;
+            @include align-items(center);
+            margin: 21px 0 31px;
+
+            li {
+                @include not-last {
+                    margin-right: 22px;
+                }
+
+                a {
+                    color: $white;
+
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+        ul:not(.social-links) {
+            margin-left: 0;
+
+            li {
+                a {
+                    font-size: 15px;
+                    line-height: 163.6%;
+                    color: $white;
+
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+        P {
+            font-size: 15px;
+            line-height: 163.6%;
+            color: $white;
+
+            a {
+                text-decoration: underline !important;
+            }
+        }
+    }
+}

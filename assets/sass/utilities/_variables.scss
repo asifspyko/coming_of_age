@@ -1,0 +1,23 @@
+$enable-caret: false;
+
+// Fonts Fallback
+$typographic-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+// Fonts
+$body_font: 'Aleo', serif, $typographic-font-family;
+$circular: 'Circular Std', serif, $typographic-font-family;
+$circular_book: 'Circular Std Book', serif, $typographic-font-family;
+$font_awesome: 'Font Awesome 5 Free';
+
+// Color pallets
+$transparent: rgba(0,0,0,0);
+$white: #fff;
+$black: #000;
+$blue: #11526A;
+$mid_blue: #0A808E;
+$teal: #ACDDD4;
+$red: #CB4945;
+$orange: #E17F26;
+$yellow: #ECB91E;
+$purple: #8F6B7C;
+$burny_yellow: #D0952A;

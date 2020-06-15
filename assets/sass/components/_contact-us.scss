@@ -1,0 +1,89 @@
+.contact-us {
+    background-image: url(../images/pattern-yellow--lg.svg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: url(../images/pattern-purple.png);
+        position: absolute;
+        left: 0;
+        bottom: -50px;
+        transform: scale(0.5) translateY(120px);
+        transform-origin: left bottom;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    &__inner {
+        padding: 220px 0 154px;
+
+        .container {
+            max-width: 785px;
+        }
+
+        &::before {
+            content: url(../images/pattern-blue-sm.svg);
+            position: absolute;
+            right: 16px;
+            bottom: -85px;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        &::after {
+            content: url(../images/pattern-mid-blue.svg);
+            position: absolute;
+            right: 0;
+            bottom: -80px;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .h1 {
+            text-align: center;
+            color: $white;
+            margin-bottom: 24px;
+        }
+
+        form {
+            input {
+                padding: 0 15px;
+                height: 51px;
+                border: 3px solid $white;
+                color: $blue;
+                outline: none !important;
+                box-shadow: none !important;
+
+                &:focus {
+                    border: 3px solid $blue;
+                }
+
+                @include placeholder {
+                    color: rgba($blue, 0.8);
+                }
+            }
+
+            .btn-wrap {
+                text-align: right;
+                margin-top: 16px;
+
+                button {
+                    padding: 8px 10px;
+                    background-color: $white;
+                    color: $yellow;
+                    font-family: $circular_book;
+                    cursor: pointer;
+                    @extend %transition;
+
+                    &:hover {
+                        color: $white;
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}

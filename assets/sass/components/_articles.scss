@@ -1,0 +1,393 @@
+.articles {
+    padding: 86px 0 26px;
+
+    .featured-block {
+        padding: 10px;
+        margin-bottom: 34px;
+
+        .img-wrapper {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .article-caption {
+                position: absolute;
+                bottom: 14px;
+                left: 14px;
+                right: 14px;
+                max-width: 378px;
+                padding: 10px 16px 15px;
+                background-color: $white;
+
+                h2 {
+                    color: $blue;
+                    margin-bottom: 18px;
+                }
+
+                P {
+                    font-family: $circular_book;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: $blue;
+
+                    a {
+                        color: $burny_yellow;
+
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .block-meta {
+            padding-top: 15px;
+            max-width: 464px;
+
+            p {
+                font-size: 15px;
+                line-height: 163.6%;
+                color: $blue;
+            }
+
+            .btn-wrap {
+                a {
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 163.6%;
+                    color: $blue;
+                    border-bottom: 3px solid $transparent;
+                    display: inline-block;
+                    margin: 0;
+
+                    &:hover {
+                        border-bottom: 3px solid $red;
+                    }
+                }
+            }
+        }
+    }
+
+    .article-block {
+        padding: 10px;
+        margin-bottom: 60px;
+
+        .block-thumbnail {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .article-caption {
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                padding: 8px 16px;
+                background-color: $mid_blue;
+
+                h4 {
+                    color: $white;
+                    font-size: 18px;
+                    line-height: 23px;
+                }
+            }
+        }
+
+        .block-meta {
+            padding-top: 15px;
+            max-width: 372px;
+
+            p {
+                font-size: 15px;
+                line-height: 163.6%;
+                color: $blue;
+            }
+
+            .btn-wrap {
+                a {
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 163.6%;
+                    color: $blue;
+                    border-bottom: 3px solid $transparent;
+                    display: inline-block;
+                    margin: 0;
+
+                    &:hover {
+                        border-bottom: 3px solid $red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.articles-main {
+    padding: 95px 0;
+    position: relative;
+
+    .shop-cta {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        a {
+            position: relative;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 19px;
+            text-align: center;
+            color: #FFFFFF;
+            display: block;
+            padding: 43px 14px;
+            font-family: $circular;
+            text-align: center;
+
+            span {
+                display: block;
+                position: relative;
+            }
+
+            img {
+                position: relative;
+            }
+
+            &::before {
+                position: absolute;
+                right: 0;
+                top: 0;
+                content: url(../images/pattern-shop-cta.svg);
+            }
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
+    .img-wrapper {
+        img {
+            width: 100%;
+        }
+
+        &:not(:nth-of-type(1)) {
+            margin: 25px 0;
+        }
+    }
+
+    .article-meta {
+        padding-right: 58px;
+
+        .article-top {
+            margin: 48px 0 32px;
+
+            p {
+                span {
+                    @include not-last {
+                        margin-right: 60px;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin: 25px 0;
+        }
+
+        p {
+            &+p {
+                margin-top: 25px;
+            }
+        }
+
+        ul {
+            @extend .list-default;
+            margin: 25px 0;
+        }
+
+        ol {
+            @extend .list-default;
+            margin: 25px 0;
+        }
+
+    }
+
+    .article-author {
+        margin-top: 75px;
+        @include flex;
+
+        .author-avatar {
+            width: 100%;
+            max-width: 228px;
+            margin-right: 27px;
+        }
+
+        .author-meta {
+            max-width: 417px;
+            @include flex;
+            @include flex-direction(column);
+            padding-bottom: 15px;
+
+            h2 {
+                margin-bottom: 21px;
+            }
+
+            p {
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 163.6%;
+            }
+
+            .btn-wrap {
+                margin-top: auto;
+
+                a {
+                    text-decoration: underline !important;
+                }
+            }
+        }
+    }
+
+    .right-sidebar {
+        padding-top: 91px;
+        padding-left: 86px;
+        position: relative;
+        height: 100%;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 1px;
+            position: absolute;
+            left: 20px;
+            background-color: $blue;
+            top: 0;
+        }
+    }
+
+    .related-articles {
+
+        h2 {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        .related-articles-block {
+            @include not-last {
+                margin-bottom: 60px;
+            }
+
+            .block-thumbnail {
+                margin-bottom: 16px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .block-meta {
+                span {
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $blue;
+
+                    strong {
+                        color: $burny_yellow;
+                        font-weight: bold;
+                    }
+                }
+
+                h4 {
+                    margin-top: 8px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #09526A;
+                    max-width: 216px;
+                }
+            }
+        }
+    }
+}
+
+
+.widget-newsletter {
+    padding: 43px 24px 70px 36px;
+    position: relative;
+    background-color: $yellow;
+    margin-top: 129px;
+
+    &::before,
+    &::after {
+        content: url(../images/pattern-yellow-sm.svg);
+        position: absolute;
+    }
+
+    &::before {
+        top: -34px;
+        right: 0;
+    }
+
+    &::after {
+        bottom: -34px;
+        left: 0;
+        transform: scale(-1);
+    }
+
+    form {
+        h2 {
+            font-size: 18px;
+            line-height: 22px;
+            color: $white;
+            margin-bottom: 11px;
+            text-align: center;
+        }
+
+        input {
+            padding: 0 15px;
+            height: 37px;
+            border: 1px solid $white;
+            color: $blue;
+            outline: none !important;
+            box-shadow: none !important;
+
+            @include placeholder {
+                color: rgba($blue, 0.8);
+            }
+
+            &:focus {
+                border: 1px solid $blue;
+            }
+        }
+
+        .btn-wrap {
+            text-align: right;
+            margin-top: 6px;
+
+            button {
+                padding: 8px 10px;
+                background-color: $white;
+                color: $yellow;
+                font-family: $circular_book;
+                cursor: pointer;
+                @extend %transition;
+
+                &:hover {
+                    color: $white;
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+}

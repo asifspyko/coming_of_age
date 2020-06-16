@@ -10,6 +10,10 @@
     @extend %transition;
     z-index: 999;
 
+    @include mobile {
+        padding: 15px 0 20px;
+    }
+
     &::before,
     &::after {
         content: '';
@@ -18,6 +22,10 @@
         width: 100%;
         height: 20px;
         @extend %transition;
+
+        @include mobile {
+            height: 10px;
+        }
     }
 
     &::before {
@@ -33,6 +41,17 @@
     .title-bar {
         padding: 0;
         background: none;
+    }
+
+    a.site-logo {
+        @include tablet {
+            margin-left: 20px;
+        }
+
+        @include mobile {
+            display: block;
+            max-width: 150px;
+        }
     }
 
     .navbar-toggler {
@@ -100,14 +119,67 @@
     .site-navigation {
         margin-left: auto;
 
+        @include tablet {
+            position: fixed;
+            top: 156px;
+            @include calc(height, '100vh - 156px');
+            left: 0;
+            display: block !important;
+            transform: translateX(-100%);
+            transition: 0.6s all ease;
+            background-color: $blue;
+            width: 100%;
+            z-index: 99;
+        }
+
+        @include mobile {
+            top: 75px;
+            @include calc(height, '100vh - 75px');
+        }
+
+        @include scrolling-up {
+            @include tablet {
+                top: 92px;
+                @include calc(height, '100vh - 92px');
+            }
+
+            @include mobile {
+                top: 75px;
+                @include calc(height, '100vh - 75px');
+            }
+        }
+
+        &.show {
+            transform: translateX(0);
+        }
+
         .menu {
             margin-left: auto;
 
+            @include tablet {
+                @include flex-direction (column);
+                padding: 50px 0;
+            }
+
             .menu-item {
-                padding: 0 18px;
+                padding: 0 19px;
                 font-size: 0;
                 @include flex;
                 @include align-items(center);
+
+                @include tablet-lg {
+                    padding: 0 13px;
+                }
+
+                @include not-last {
+                    @include tablet {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
 
                 .menu-link {
                     color: $white;
@@ -156,6 +228,10 @@
                         outline: none;
                         box-shadow: none;
 
+                        @include tablet-lg {
+                            width: 200px;
+                        }
+
                         @include placeholder {
                             color: #75A4B4;
                         }
@@ -187,6 +263,10 @@
     &--sticked-top {
         padding: 20px 0 30px;
         background-color: rgba($blue, 0.95);
+
+        @include mobile {
+            padding: 15px 0 20px;
+        }
 
         &::before {
             height: 10px;

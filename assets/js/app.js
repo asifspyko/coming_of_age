@@ -62,3 +62,12 @@ $('.navbar-toggler').on(
         $(this).toggleClass('active');
     }
 );
+
+// Resize Carousel on Reveal
+$(document).on(
+    'toggled.zf.responsiveToggle',
+    function () {
+        $('.site-navigation').toggleClass('show');
+        $('body').toggleClass('overflow-stopped');
+    }
+);

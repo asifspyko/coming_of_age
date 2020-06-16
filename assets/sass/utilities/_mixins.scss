@@ -59,6 +59,12 @@
     }
 }
 
+@mixin scrolling-up {
+    body.is-scrolling-up & {
+        @content
+    }
+}
+
 %visually-hidden {
     margin: -1px;
     padding: 0;

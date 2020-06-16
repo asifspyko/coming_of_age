@@ -48,17 +48,42 @@
 
     .pl-75 {
         padding-left: 75px;
+
+        @include tablet-lg {
+            padding-left: 35px;
+        }
+
+        @include tablet {
+            padding-left: 0px;
+        }
     }
 
     .footer-block-wrapper {
         @include flex;
+
+        @include tablet {
+            margin-top: 30px;
+        }
+
+        @include mobile {
+            @include flex-direction(column);
+        }
     }
 
     .footer-block {
         min-width: 108px;
 
         @include not-last {
-            margin-right: 60px;
+            margin-right: 49px;
+
+            @include tablet-lg {
+                margin-right: 30px;
+            }
+
+            @include mobile {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
         }
 
         .social-links {
